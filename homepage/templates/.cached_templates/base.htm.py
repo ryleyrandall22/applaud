@@ -7,7 +7,7 @@ __M_locals_builtin = locals
 _magic_number = 10
 _modified_time = 1519167947.2370179
 _enable_loop = True
-_template_filename = 'C:/Users/conno/Desktop/Riley/homepage/templates/base.htm'
+_template_filename = 'C:/Users/conno/Desktop/Ryley/homepage/templates/base.htm'
 _template_uri = 'base.htm'
 _source_encoding = 'utf-8'
 _exports = ['content']
@@ -56,6 +56,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/conno/Desktop/Riley/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"16": 14, "18": 0, "27": 2, "28": 10, "29": 13, "30": 14, "31": 15, "32": 15, "37": 26, "38": 31, "39": 31, "45": 24, "51": 24, "57": 51}}
+{"filename": "C:/Users/conno/Desktop/Ryley/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"16": 14, "18": 0, "27": 2, "28": 10, "29": 13, "30": 14, "31": 15, "32": 15, "37": 26, "38": 31, "39": 31, "45": 24, "51": 24, "57": 51}}
 __M_END_METADATA
 """

@@ -7,7 +7,7 @@ __M_locals_builtin = locals
 _magic_number = 10
 _modified_time = 1519167947.1888685
 _enable_loop = True
-_template_filename = 'C:/Users/conno/Desktop/Riley/homepage/templates/index.html'
+_template_filename = 'C:/Users/conno/Desktop/Ryley/homepage/templates/index.html'
 _template_uri = 'index.html'
 _source_encoding = 'utf-8'
 _exports = ['content']
@@ -47,7 +47,7 @@ def render_content(context,**pageargs):
         def content():
             return render_content(context)
         __M_writer = context.writer()
-        __M_writer('\r\n    <div class="content">\r\n        <h1>Riley</h1>\r\n    </div>\r\n')
+        __M_writer('\r\n    <div class="content">\r\n        <h1>Ryley</h1>\r\n    </div>\r\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -55,6 +55,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/conno/Desktop/Riley/homepage/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"27": 0, "34": 1, "44": 3, "50": 3, "56": 50}}
+{"filename": "C:/Users/conno/Desktop/Ryley/homepage/templates/index.html", "uri": "index.html", "source_encoding": "utf-8", "line_map": {"27": 0, "34": 1, "44": 3, "50": 3, "56": 50}}
 __M_END_METADATA
 """
