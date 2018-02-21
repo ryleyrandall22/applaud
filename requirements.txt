@@ -1,0 +1,17 @@
+cloudinary==1.8.0
+dj-database-url==0.4.1
+Django==1.11
+django-ckeditor==5.3.1
+django-js-asset==0.1.1
+django-mako-plus==4.1.8
+django-polymorphic==1.2
+django-registration==2.2
+gunicorn==19.6.0
+Mako==1.0.6
+MarkupSafe==1.0
+mock==2.0.0
+pbr==3.1.1
+psycopg2==2.6.2
+pytz==2017.3
+urllib3==1.22
+whitenoise==2.0.6
