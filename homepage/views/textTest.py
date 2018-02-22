@@ -6,13 +6,10 @@ from .. import dmp_render, dmp_render_to_string
 from django.http import HttpResponse, HttpResponseRedirect
 from .. import dmp_render, dmp_render_to_string
 from django import forms
-from django.http import HttpResponseRedirect
-from django.contrib.auth import authenticate, login
-from django.shortcuts import render
 
 @view_function
 def process_request(request):
     context = {
 
     }
-    return dmp_render(request, 'index.html', context)
+    return dmp_render(request, 'textTest.html', context)

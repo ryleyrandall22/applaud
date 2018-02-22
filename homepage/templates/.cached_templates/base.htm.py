@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1519167947.2370179
+_modified_time = 1519173133.917633
 _enable_loop = True
 _template_filename = 'C:/Users/conno/Desktop/Riley/homepage/templates/base.htm'
 _template_uri = 'base.htm'
@@ -19,14 +19,13 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        self = context.get('self', UNDEFINED)
+        request = context.get('request', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
-        request = context.get('request', UNDEFINED)
+        self = context.get('self', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('<!DOCTYPE html>\r\n<html>\r\n    <meta charset="UTF-8">\r\n    <head>\r\n\r\n        <title>DMP</title>\r\n\r\n')
-        __M_writer('        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\r\n\r\n')
-        __M_writer('        <script src="/django_mako_plus/dmp-common.min.js"></script>\r\n        ')
+        __M_writer('<!DOCTYPE html>\r\n<html>\r\n    <meta charset="UTF-8">\r\n    <head>\r\n\r\n        <title>Applaud</title>\r\n\r\n')
+        __M_writer('        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>\r\n        ')
         __M_writer('\r\n        ')
         __M_writer(str( get_template_css(self, request, context) ))
         __M_writer('\r\n\r\n    </head>\r\n    <body>\r\n\r\n        <header>\r\n        </header>\r\n\r\n        <main>\r\n            ')
@@ -56,6 +55,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "C:/Users/conno/Desktop/Riley/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"16": 14, "18": 0, "27": 2, "28": 10, "29": 13, "30": 14, "31": 15, "32": 15, "37": 26, "38": 31, "39": 31, "45": 24, "51": 24, "57": 51}}
+{"filename": "C:/Users/conno/Desktop/Riley/homepage/templates/base.htm", "uri": "base.htm", "source_encoding": "utf-8", "line_map": {"16": 11, "18": 0, "27": 2, "28": 10, "29": 11, "30": 12, "31": 12, "36": 23, "37": 28, "38": 28, "44": 21, "50": 21, "56": 50}}
 __M_END_METADATA
 """
