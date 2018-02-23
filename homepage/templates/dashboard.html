@@ -1,0 +1,44 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+
+<nav id="navbar-inverse" class="navbar navbar-inverse navbar-fixed-left">
+	<div class="container">
+	  <div class="navbar-header">
+	    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </button>
+	    <img class="navbar-brand" id="profile" src="${ STATIC_URL }homepage/media/logo2.png"/>
+	  </div>
+	  <div id="navbar" class="navbar-collapse collapse">
+	    <ul class="nav navbar-nav">
+	      <li><a href="#">Dashboard</a></li>
+	      <li><a href="#">Google</a></li>
+	      <li><a href="#">Facebook</a></li>
+	      <li><a href="#">Instagram</a></li>
+
+	      <li><button id="customer" class="btn btn-info">Customer View</button></li>
+	    </ul>
+
+	    <img id="profile2" src="${ STATIC_URL }homepage/media/logo.png"/>
+	  </div>
+	</div>
+</nav>
+
+
+<div class="container">
+
+	<div class="col-md-12">
+
+		<h1>Dashboard</h1>
+
+	</div>
+
+</div>
+
+
+
+</%block>
