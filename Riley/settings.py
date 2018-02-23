@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_mako_plus',
+    'phonenumber_field',
     'homepage',
 ]
 
@@ -63,6 +64,16 @@ TEMPLATES = [
         'OPTIONS': {
             # the default app and page to render in Mako when the url is too short
             # if None (no default app), DMP's urls.py will not capture short URLs
+
+            'CONTEXT_PROCESSORS': [
+                'django.template.context_processors.static',            # adds "STATIC_URL" from settings.py
+                'django.template.context_processors.debug',             # adds debug and sql_queries
+                'django.template.context_processors.request',           # adds "request" object
+                'django.contrib.auth.context_processors.auth',          # adds "user" and "perms" objects
+                'django.contrib.messages.context_processors.messages',  # adds messages from the messages framework
+                'django_mako_plus.context_processors.settings',         # adds "settings" dictionary
+            ],
+            
             'DEFAULT_APP': 'homepage',
             'DEFAULT_PAGE': 'index',
 
@@ -146,6 +157,8 @@ STATICFILES_DIRS = (
     BASE_DIR,
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL='/static/media/'
 
 
 # A logger for DMP
