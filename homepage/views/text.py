@@ -7,7 +7,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .. import dmp_render, dmp_render_to_string
 from django import forms
 from twilio.rest import Client
-from phonenumber_field.modelfields import PhoneNumberField
 
 class MessageInfo(forms.Form):
 	name = forms.CharField(max_length=300, required=True, widget=forms.TextInput({ "placeholder": "Name"}), label="Name")
