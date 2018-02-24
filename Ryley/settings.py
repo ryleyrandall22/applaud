@@ -52,6 +52,7 @@ AUTHENTICATION_BACKENDS = (
   'django.contrib.auth.backends.ModelBackend',
 )
 
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -61,7 +62,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
@@ -77,6 +77,7 @@ TEMPLATES = [
         'OPTIONS': {
             # the default app and page to render in Mako when the url is too short
             # if None (no default app), DMP's urls.py will not capture short URLs
+
             'DEFAULT_APP': 'homepage',
             'DEFAULT_PAGE': 'index',
 
@@ -109,7 +110,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
             ],
@@ -130,8 +130,6 @@ TEMPLATES = [
 #     'social.pipeline.user.user_details',
 #     'social.pipeline.debug.debug',
 # )
-
-
 
 WSGI_APPLICATION = 'Ryley.wsgi.application'
 
@@ -224,3 +222,4 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '8m9qXCIIS0O2E48hPfcBXWIx' #Paste Secret Key
 
 SOCIAL_AUTH_FACEBOOK_KEY = '2084317135137536'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = '7f7717f5ede4c592b5a1081ae75b7c6e'  # App Secret
+

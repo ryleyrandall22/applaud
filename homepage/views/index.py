@@ -12,7 +12,6 @@ from django.shortcuts import render
 
 @view_function
 def process_request(request):
-    
     context = {
 
     }
