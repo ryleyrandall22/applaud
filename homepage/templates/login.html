@@ -1,0 +1,9 @@
+
+${ '{{ name }}' | django_syntax(local) }
+
+## Full Django code block, with Mako creating the variable first
+<% titles = [ 'First', 'Second', 'Third' ] %>
+<%block filter="django_syntax(local, titles=titles)">
+<a href="{% url 'social:begin' 'google-oauth2' %}">Login with Google</a><br>
+<a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+</%block>
