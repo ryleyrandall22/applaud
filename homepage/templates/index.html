@@ -1,9 +1,12 @@
 <%inherit file="base.htm" />
 
 <%block name="content">
-  %if not request.user.is_authenticated:
-    <p class="display-4">Hello, ${ user.username }</p>
-  %else:
-    <a class="lead" href="{% url 'login' %}">Log in</a>
-  %endif
+  ## %if not request.user.is_authenticated:
+  ##   ## <p class="display-4">Hello, ${ user.username }</p>
+  ##   <a class="lead" href="{% url 'login' %}">Log in</a>
+  ## %else:
+  ##   <a class="lead" href="{% url 'login' %}">Log in</a>
+  ## %endif
+
+  <a class="lead" href="{% url 'login' %}">Log in</a>
 </%block>

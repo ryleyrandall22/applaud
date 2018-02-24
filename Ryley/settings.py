@@ -79,7 +79,7 @@ TEMPLATES = [
             # if None (no default app), DMP's urls.py will not capture short URLs
 
             'DEFAULT_APP': 'homepage',
-            'DEFAULT_PAGE': 'index',
+            'DEFAULT_PAGE': 'dashboard',
 
             # imports for every template
             'DEFAULT_TEMPLATE_IMPORTS': [
@@ -88,12 +88,12 @@ TEMPLATES = [
                 'from django_mako_plus import django_syntax, jinja2_syntax, alternate_syntax',
                 # 'import os, os.path, re, json',
             ],
-            'context_processors': [
+            'CONTEXT_PROCESSORS': [
+                'django.template.context_processors.static', # adds "STATIC_URL" from settings.py
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-
                 'social_django.context_processors.backends',
                 'social_django.context_processors.login_redirect',
             ],
@@ -189,6 +189,8 @@ STATICFILES_DIRS = (
     BASE_DIR,
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL='/static/media/'
 
 
 # A logger for DMP

@@ -16,4 +16,4 @@ def process_request(request):
     context = {
 
     }
-    return dmp_render(request, 'login.html', context)
+    return dmp_render(request, 'googleLogin.html', context)

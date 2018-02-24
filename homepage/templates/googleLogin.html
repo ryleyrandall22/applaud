@@ -1,0 +1,23 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+
+${ '{{ name }}' | django_syntax(local) }
+## Full Django code block, with Mako creating the variable first
+<% titles = [ 'First', 'Second', 'Third' ] %>
+<%block filter="django_syntax(local, titles=titles)">
+
+<div class="container-fluid">
+
+	<div class="col-md-12">
+
+		<a href="{% url 'social:begin' 'google-oauth2' %}"><button class="btn btn-danger">Login with Google</button></a>
+
+	</div>
+
+</div>
+
+
+</%block>
+
+</%block>
