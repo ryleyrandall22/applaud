@@ -1,0 +1,12 @@
+**/*.log
+db.sqlite3
+media/
+*.sql
+mysqlinit
+logs/
+logs/*.log
+.DS_Store
+__pycache__
+**/__pycache__
+**/*.pyc
+*.pyc
