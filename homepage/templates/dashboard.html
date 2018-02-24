@@ -29,16 +29,242 @@
 </nav>
 
 
-<div class="container">
+<!-- <div style="height: 100vh"> -->
 
-	<div class="col-md-12">
+	<!-- <div class="col-md-12"> -->
 
-		<h1>Dashboard</h1>
+		<div class="section_box">
+			<div class="reivews_sec">Reviews</div>
+				<div class="review_innersec" style="width: 65%">
+						<div class="reviews_top_stat">
+								<div class="inner_top_stat">
+									<div class="stat_inner">Search Appearance This Month</div>
+									<div class="stat_inner stat_num">142</div>
+								</div>
+								<div class="inner_top_stat">
+									<div class="stat_inner">Average Rating</div>
+									<div class="stat_inner stat_num">4.0</div>
+								</div>
+						</div>
+						<div class="most_recent_reviews">
+							<div class="reivews_sec">Most Recent Reviews</div>
+							<!-- <div class="each_review"></div>
+							<div class="each_review"></div>
+							<div class="each_review"></div>
+							<div class="each_review"></div> -->
+						</div>
+				</div>
+				<div class="review_innersec" style="width: 35%">
+					<div class="inner_right_box">
+						<div style="text-align: center; font-size: 20px;">New Review SMS</div>
+						<div class="inner_right_box_left" style="margin-left: 5px;">
+							<div style="margin-top: 10px;">Name:</div>
+							<input />
+							<div>Phone:</div>
+							<input />
+						</div>
+						<div class="inner_right_box_left send_box"><button>Send</button></div>
+					</div>
+					<div class="inner_right_box">
+							<div class="reivews_sec">Total Reviews</div>
+							<div class="right_box_lower_inner">47</div>
+							<div class="right_box_lower_inner"></div>
+					</div>
+				</div>
+		</div>
 
-	</div>
+		<div class="section_box">
+			<div class="reivews_sec">Social</div>
+			<div class="social_box" style="height: 80px;">
+					<div class="social_box_sec">
+						<div class="social_box_sectitle">Followers:</div>
+						<div class="social_box_secnumb">1212</div>
+					</div>
+					<div class="social_box_sec">
+						<div class="social_box_sectitle">Profile Views:</div>
+						<div class="social_box_secnumb">1212</div>
+					</div>
+					<div class="social_box_sec">
+						<div class="social_box_sectitle">Total Engagement:</div>
+						<div class="social_box_secnumb">1212</div>
+					</div>
+					<div class="social_box_sec">
+						<div class="social_box_sectitle">Page Likes:</div>
+						<div class="social_box_secnumb">1212</div>
+					</div>
+					<div class="social_box_sec">
+						<div class="social_box_sectitle">Page Views:</div>
+						<div class="social_box_secnumb">1212</div>
+					</div>
+					<div class="social_box_sec">
+						<div class="social_box_sectitle">Page Actions:</div>
+						<div class="social_box_secnumb">1212</div>
+					</div>
+			</div>
+			<div class="social_box">
+				<div class="social_graph_box">
+					<div class="reivews_sec">Instagram Link Clicks</div>
+					<div class="social_graph_box_inner"></div>
+					<div class="social_graph_box_inner social_num">8</div>
+				</div>
+				<div class="social_graph_box">
+					<div class="reivews_sec">Facebook Reach</div>
+					<div class="social_graph_box_inner"></div>
+					<div class="social_graph_box_inner social_num">21</div>
+				</div>
+			</div>
+		</div>
 
-</div>
+	<!-- </div> -->
 
+<!-- </div> -->
 
+<style>
+.section_box {
+	width: 98%;
+	height: 380px;
+	border: 4px solid lightgray;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+.reivews_sec {
+	width: 100%;
+	height: 35px;
+	background: lightgray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	font-weight: bold;
+
+}
+
+.review_innersec {
+	height: calc(100% - 35px);
+	border: 1px solid lightgray;
+	width: 50%;
+	float: left;
+}
+
+.inner_top_stat {
+	width: 50%;
+  border: 2px solid lightgray;
+  float: left;
+  height: 85px;
+}
+
+.stat_inner {
+	float: left;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 10px;
+	color: #87aea0;
+}
+
+.each_review {
+	height: 54px;
+	border: 2px solid gray;
+}
+
+.inner_right_box {
+	height: 50%;
+}
+
+.right_box_lower_inner {
+	width: 50%;
+	font-size: 80px;
+	font-size: lightgreen;
+	text-align: center;
+	color: #87aea0;
+}
+
+.inner_right_box_left {
+	width: 49%;
+	/* border: 2px solid red; */
+	float: left;
+	height: calc(100% - 35px)
+}
+
+.inner_right_box_left button {
+	width: 80%;
+	height: 60%;
+	background-color: #87aea0;
+	border-radius: 10px;
+	color: white;
+	margin-left: 15px;
+	margin-top: 25px;
+}
+
+.inner_right_box_left input {
+	border: 2px solid gray;
+}
+
+.social_box_sec {
+	border: 2px solid lightgray;
+	height: 100%;
+	width: calc(100% / 6);
+	float: left;
+}
+
+.social_box_sectitle {
+	font-size: 17px;
+	font-style: bold;
+	margin-left: 5px;
+}
+
+.social_box_secnumb {
+	font-size: 28px;
+	text-align: center;
+	color: #87aea0;
+	margin-top: 5px;
+}
+
+.social_graph_box {
+	width: 50%;
+	height: 260px;
+	float: left;
+	border: 2px solid lightgray;
+}
+
+.social_graph_box_inner {
+	width: 50%;
+	text-align: center;
+	font-size: 80px;
+	color: #87aea0;
+	float: left;
+	height: 100px;
+}
+
+.social_num {
+	margin-top: 45px;
+}
+
+.stat_num {
+	font-size: 65px;
+	margin-top: -10px;
+}
+
+@media (max-width: 1400px) {
+	.stat_inner {
+		font-size: 15px;
+	}
+	.stat_num {
+		font-size: 50px;
+	}
+	.send_box {
+		display: none;
+	}
+	.social_box_sectitle {
+		font-size: 15px;
+	}
+	.right_box_lower_inner {
+		font-size: 65px;
+		margin-top: 20px;
+	}
+}
+</style>
 
 </%block>
