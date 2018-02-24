@@ -1,0 +1,13 @@
+<%inherit file="base.htm" />
+
+<%block name="content">
+
+	<h1>Text with Twilio Testing</h1>
+
+	<form action="/text" method="post">${ csrf_input }
+		<div class="form-group">${ form }</div>
+		  <button type="submit">Send</button>
+		<div class="clearfix"></div>
+	</form>
+
+</%block>
