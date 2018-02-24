@@ -39,9 +39,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_mako_plus',
-    'phonenumber_field',
+    'social_django',
     'homepage',
 ]
+
+AUTHENTICATION_BACKENDS = (
+  'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
+  'social_core.backends.google.GoogleOpenId',  # for Google authentication
+  'social_core.backends.google.GoogleOAuth2',  # for Google authentication
+  'social_core.backends.facebook.FacebookOAuth2',  # for Facebook authentication
+
+  'django.contrib.auth.backends.ModelBackend',
+)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'Ryley.urls'
@@ -61,19 +72,12 @@ TEMPLATES = [
         # Note that additional options exist - see the DMP docs
         'NAME': 'django_mako_plus',
         'BACKEND': 'django_mako_plus.MakoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
         'OPTIONS': {
             # the default app and page to render in Mako when the url is too short
             # if None (no default app), DMP's urls.py will not capture short URLs
 
-            'CONTEXT_PROCESSORS': [
-                'django.template.context_processors.static',            # adds "STATIC_URL" from settings.py
-                'django.template.context_processors.debug',             # adds debug and sql_queries
-                'django.template.context_processors.request',           # adds "request" object
-                'django.contrib.auth.context_processors.auth',          # adds "user" and "perms" objects
-                'django.contrib.messages.context_processors.messages',  # adds messages from the messages framework
-                'django_mako_plus.context_processors.settings',         # adds "settings" dictionary
-            ],
-            
             'DEFAULT_APP': 'homepage',
             'DEFAULT_PAGE': 'index',
 
@@ -81,14 +85,24 @@ TEMPLATES = [
             'DEFAULT_TEMPLATE_IMPORTS': [
                 # the next two lines are just examples of including common imports in templates
                 # 'from datetime import datetime',
+                'from django_mako_plus import django_syntax, jinja2_syntax, alternate_syntax',
                 # 'import os, os.path, re, json',
+            ],
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
     {
         'NAME': 'django',
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -96,10 +110,26 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
+
+# SOCIAL_AUTH_PIPELINE = (
+#     'social.pipeline.social_auth.social_details',
+#     'social.pipeline.social_auth.social_uid',
+#     'social.pipeline.social_auth.auth_allowed',
+#     'social.pipeline.social_auth.social_user',
+#     'social.pipeline.user.get_username',
+#     'social.pipeline.user.create_user',
+#     'social.pipeline.social_auth.associate_user',
+#     'social.pipeline.debug.debug',
+#     'social.pipeline.social_auth.load_extra_data',
+#     'social.pipeline.user.user_details',
+#     'social.pipeline.debug.debug',
+# )
 
 WSGI_APPLICATION = 'Ryley.wsgi.application'
 
@@ -147,6 +177,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -157,8 +189,6 @@ STATICFILES_DIRS = (
     BASE_DIR,
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL='/static/media/'
 
 
 # A logger for DMP
@@ -187,4 +217,9 @@ LOGGING = {
     },
 }
 
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY ='723190502625-dmqli6e1nsodgdd2mm685ltg9dt1ug1v.apps.googleusercontent.com'  #Paste CLient Key
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '8m9qXCIIS0O2E48hPfcBXWIx' #Paste Secret Key
+
+SOCIAL_AUTH_FACEBOOK_KEY = '2084317135137536'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '7f7717f5ede4c592b5a1081ae75b7c6e'  # App Secret
 
